@@ -38,6 +38,7 @@ tests:
       pip_check: true
 
       python_version: ${{ python_min }}.*
+
 about:
   summary: Easy to use extractive text summarization with BERT
   license: MIT
