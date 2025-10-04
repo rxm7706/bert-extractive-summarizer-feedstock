@@ -3,7 +3,6 @@ schema_version: 1
 
 context:
   name: bert-extractive-summarizer
-  python_min: 3.8
   version: "0.10.1"
 
 package:
@@ -36,8 +35,18 @@ tests:
         - summarizer
         - tests
       pip_check: true
-
       python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+        # Tests Only
+        - scikit-learn
+        - spacy
+        - transformers
+        - pytorch
+    script:
+      - pip check
 
 about:
   summary: Easy to use extractive text summarization with BERT
