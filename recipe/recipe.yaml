@@ -33,7 +33,6 @@ tests:
   - python:
       imports:
         - summarizer
-        - tests
       pip_check: true
       python_version: ${{ python_min }}.*
   - requirements:
@@ -45,8 +44,21 @@ tests:
         - spacy
         - transformers
         - pytorch
-    script:
-      - pip check
+
+  - script:
+      - python -m pytest tests
+    files:
+      source:
+        - tests/
+    requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+        # Tests Only
+        - scikit-learn
+        - spacy
+        - transformers
+        - pytorch
 
 about:
   summary: Easy to use extractive text summarization with BERT
