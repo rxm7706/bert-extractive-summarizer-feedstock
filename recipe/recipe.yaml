@@ -30,10 +30,13 @@ requirements:
     - spacy
 
 tests:
+  - python:
+      imports:
+        - summarizer
+      pip_check: true
+      python_version: ${{ python_min }}.*
   - script:
       - python -m pytest tests
-      - python -m import summarizer
-      - pip check
     files:
 
       source:
