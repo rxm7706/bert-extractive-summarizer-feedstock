@@ -45,6 +45,8 @@ tests:
         - pytest
         - scikit-learn
         - spacy
+        - sentence-transformers
+        - neuralcoref
         - transformers
         - pytorch
 
