@@ -35,8 +35,10 @@ tests:
       - python -m import summarizer
       - pip check
     files:
+
       source:
         - tests/
+
     requirements:
       run:
         - python ${{ python_min }}.*
