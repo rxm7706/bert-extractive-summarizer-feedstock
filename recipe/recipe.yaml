@@ -42,6 +42,7 @@ tests:
         - python ${{ python_min }}.*
         - pip
         # Tests Only
+        - pytest
         - scikit-learn
         - spacy
         - transformers
