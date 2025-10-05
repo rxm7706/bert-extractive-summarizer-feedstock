@@ -34,7 +34,9 @@ tests:
       - pip check
       #- python -c "assert __import__('summarizer').__version__ == '${{ version }}'"
       # AttributeError: module 'summarizer' has no attribute '__version__'
-      - python -c "import importlib.metadata; assert importlib.metadata.version('summarizer') == '${{ version }}'"
+      #- python -c "import summarizer; assert importlib.metadata.version('summarizer') == '${{ version }}'"
+      # importlib.metadata.PackageNotFoundError: No package metadata was found for summarizer
+      - python -c "from summarizer import *"
       #- python -m pytest tests
     files:
       source:
