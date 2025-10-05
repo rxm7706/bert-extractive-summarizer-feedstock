@@ -37,7 +37,7 @@ tests:
       #- python -c "import summarizer; assert importlib.metadata.version('summarizer') == '${{ version }}'"
       # importlib.metadata.PackageNotFoundError: No package metadata was found for summarizer
       - python -c "from summarizer import *"
-      #- python -m pytest tests
+      - python -m pytest tests
     files:
       source:
         - tests/
