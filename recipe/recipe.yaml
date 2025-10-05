@@ -22,7 +22,7 @@ build:
 
 requirements:
   host:
-    - python 3.8.*
+    - python ${{ python_min }}.*
     - pip
     - setuptools
   run:
@@ -34,6 +34,7 @@ requirements:
 tests:
   - script:
       - pip check
+      # https://github.com/conda-forge/owlrl-feedstock/blob/main/recipe/recipe.yaml
       #- python -c "assert __import__('summarizer').__version__ == '${{ version }}'"
       # AttributeError: module 'summarizer' has no attribute '__version__'
       #- python -c "import summarizer; assert importlib.metadata.version('summarizer') == '${{ version }}'"
@@ -51,6 +52,7 @@ tests:
         - pip
         # Tests Only
         - pytest
+        - coverage
         - scikit-learn
         - spacy
         - sentence-transformers
