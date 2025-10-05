@@ -4,7 +4,7 @@ schema_version: 1
 context:
   name: bert-extractive-summarizer
   version: "0.10.1"
-  pytest_skips: not (test_coreference)
+  pytest_skips: not (coreference_handler)
   cov_fail_under: 50
 
 package:
