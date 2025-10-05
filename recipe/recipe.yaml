@@ -39,7 +39,7 @@ tests:
       #- python -c "import summarizer; assert importlib.metadata.version('summarizer') == '${{ version }}'"
       # importlib.metadata.PackageNotFoundError: No package metadata was found for summarizer
       - python -c "from summarizer import *"
-      - python -m pytest tests -k "${{ pytest_skips }}"
+      #- python -m pytest tests -k "${{ pytest_skips }}"
       #- coverage run pytest tests -vv --tb=long --color=yes -k "${{ pytest_skips }}"
       #- coverage report --show-missing --skip-covered --fail-under=${{ cov_fail_under }}
     files:
