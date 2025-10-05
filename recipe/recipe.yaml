@@ -46,7 +46,7 @@ tests:
         - scikit-learn
         - spacy
         - sentence-transformers
-        - neuralcoref
+        #- neuralcoref needs update
         - transformers
         - pytorch
 
